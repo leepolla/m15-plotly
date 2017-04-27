@@ -1,0 +1,43 @@
+---
+title: "index.rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(plotly)
+accomplishments <- c('awesome', 'cool', 'smart')
+age <- c(10, 11, 12)
+data <- data.frame(age, accomplishments)
+Lee <- plotly::(data, x = ~age, y = ~aaccomplishments, type = 'scatter',
+              mode = 'text', text = "LEE", textposition = 'middle right',
+        textfont = list(color = '#000000', size = 16)) %>%
+   layout(title = 'LEE and accomplishments',
+         xaxis = list(title = 'Age',
+                      zeroline = TRUE,
+                      range = c(0, 20)),
+         yaxis = list(title = 'accomplishments')
+  
+)
+
+Lee = plotly_POST(p, filename="bar/grouped")
+Lee
+
+```
+
+## Lee is da best
+
+Hey this is my paragraph about the stuff in this markdown file. umm plotly and junk
+
+```{r cars}
+
+```
+
+## Including Lee
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
